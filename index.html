@@ -5,51 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Manual de Instruções</title>
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
       color: #333;
-      text-align: center;
     }
 
     header {
-      background-color: #0057b8;
+      background: linear-gradient(90deg, #0057b8, #007bff);
       color: white;
-      padding: 1rem;
+      padding: 1.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
 
     header img {
       height: 50px;
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.1);
     }
 
     nav {
       background-color: #e0e0e0;
       padding: 1rem;
+      box-shadow: inset 0 -1px 3px rgba(0, 0, 0, 0.1);
     }
 
     nav ul {
-      list-style-type: none;
+      list-style: none;
       padding: 0;
+      margin: 0;
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: center;
     }
 
-    nav ul li {
-      margin: 0;
+    nav ul li a {
+      background-color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      color: #0057b8;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
-    nav ul li a {
+    nav ul li a:hover {
+      background-color: #cce0ff;
+      transform: translateY(-2px);
+    }
+
+    main {
+      padding: 2rem;
+      padding-bottom: 5rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      margin-top: 2.5rem;
       color: #0057b8;
-      text-decoration: none;
-      font-weight: bold;
-      white-space: nowrap;
+      border-bottom: 2px solid #cce0ff;
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .icon {
+      width: 80px;
+      height: auto;
+      vertical-align: middle;
+      margin-right: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .icon:hover {
+      transform: scale(1.1);
+    }
+
+    main img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    main img:hover {
+      transform: scale(1.03);
     }
 
     footer {
@@ -60,29 +120,33 @@
       position: fixed;
       bottom: 0;
       width: 100%;
+      font-size: 0.9rem;
+      box-shadow: 0 -3px 6px rgba(0,0,0,0.2);
     }
 
-    main {
-      padding: 2rem;
-      padding-bottom: 5rem;
-    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
 
-    h2 {
-      margin-top: 2rem;
-      color: #0057b8;
-    }
+      .icon {
+        width: 60px;
+      }
 
-    img.icon {
-      width: 100px;
-      height: auto;
-      vertical-align: middle;
-      margin-right: 0.5rem;
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      main {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <!-- Logo da FASEPA -->
     <img src="LOGO_FASEPA.jpg" alt="Logo FASEPA" />
     <h1>Manual de Instruções - Cadastro dos Servidores</h1>
   </header>
@@ -106,7 +170,12 @@
 
     <h2 id="primeiro-acesso">2. Primeiro Acesso</h2>
     <p>Para o primeiro acesso, utilize seu email. Você será redirecionado para configurar seu primeiro acesso ao código.</p>
-     <img src = "1.png" alt = "Passo 1"> <img src = "2.png" alt = "Passo 2"> <img src = "3.png" alt = "Passo 4"> <img src = "4.png" alt = "Passo 4"><img src = "5.png" alt = "Passo 5">
+    <img src="1.png" alt="Passo 1">
+    <img src="2.png" alt="Passo 2">
+    <img src="3.png" alt="Passo 3">
+    <img src="4.png" alt="Passo 4">
+    <img src="5.png" alt="Passo 5">
+
     <h2 id="botao-pesquisar">3. Botão Pesquisar</h2>
     <p><img src="NIIT - Pesquisar-Photoroom.png" alt="Ícone Pesquisar" class="icon">Este botão permite localizar registros existentes. Digite o nome ou matrícula e clique em “Pesquisar”.</p>
 
